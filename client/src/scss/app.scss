@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+// vendors
+@import "~bootstrap/scss/bootstrap.scss";
+
+// icons
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free/scss/brands.scss";
+@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+@import "fonts/stylesheet.css";
+
+// general
+@import "general/defaults";
+
+// components
+@import "components/topbar";
+// @import "components/admin";
+// @import "components/posts";

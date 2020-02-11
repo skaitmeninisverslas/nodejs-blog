@@ -1,0 +1,143 @@
+/*Colors*/
+/*-----------------------------------------------------------------------------*/
+$bg1:					#f7f7f7 !default; // Main bg1
+$bg2:					#02174d !default; // Main bg1
+$bg3:					#5c6c7f !default; // Benefits block bg
+$bg4:					#f9f9f9 !default; // Product text bg
+$bg5:					#e7edf3 !default; // Link block bg
+$nav1:					#ffffff !default; // Nav
+$navhover1:				#e7edf3 !default; // Nav
+$navhover2:				#0755b3 !default; // Nav
+$footer1:				#02174d !default; // Footer
+$footer2:				#1d1d1d !default; // Footer
+$el1:					#848484 !default; // Icons, elements
+$popups1:				#ffffff !default; // Popups
+$buttons1:				#0755b3 !default; // Buttons on dark
+$buttons2:				lighten(#0755b3, 10%) !default; // Buttons on light
+$buttons3:				#f7f7f7 !default; // Buttons on light
+
+$main-clr1:				#02174d !default; // dark blue
+$main-clr2:				#0755b3 !default; // dark mid blue
+$main-clr3:				#0397f6 !default; // mid blue
+$main-clr4:				#ffd301 !default; // yellow
+$main-clr5:				#9facb9 !default; // beige
+$main-clr6:				#5c6c7f !default; // dark beige
+
+$yellow:				#ac962b !default;
+$blue:					#2b5fac !default;
+$green:					#cfffda !default;
+$red:					#ff8f9a !default;
+$black:					#000000 !default;
+$white:					#ffffff !default;
+$gray:					#666666 !default;
+
+$text1:					#666666 !default; // Main body on light, p and etc.
+$text2:					#f1f1f1 !default; // Main body on dark, p and etc.
+$text3:					#888888 !default; // Main body on dark, p and etc.
+$headings1:				#444444 !default; // Headings on light, text
+$headings2:				#bdbdbd !default; // Headings on dark, text
+$headings3:				#797979 !default; // Headings mid
+$navtext1:				#111111 !default; // Nav text
+$footertext1:			#ffffff !default; // Nav text
+$footertext2:			#ffffff !default; // Nav text
+$buttonstext1:			#111111 !default; // Button text on light
+$buttonstext2:			#ffffff !default; // Button text on dark
+$buttonstext3:			#dddddd !default; // Button text on dark
+$links1:				#35abe2 !default; // Links
+$links2:				lighten(#35abe2, 10%) !default; // Links active
+
+$border1:				#f7f7f7 !default; // Borders on light
+$border2:				#d6d6d6 !default; // Border on dark
+$border3:				#dddddd !default; // Input borders
+$border4:				#666666 !default; /// Input borders
+
+$shadow1:				0 0 10px 0 rgba(0,0,0,0.04) !default; // Nav shadow
+$shadow2:				-5px 5px 20px -10px rgba(0,0,0,0.75) !default; // Elements shadow
+
+/*Durations*/
+/*-----------------------------------------------------------------------------*/
+$duration-xs: 			200ms !default;
+$duration-sm: 			400ms !default;
+$duration-md: 			600ms !default;
+$duration-lg: 			800ms !default;
+$duration-xl: 			1s !default;
+$duration-xxl: 			2s !default;
+
+/*Fonts*/
+/*-----------------------------------------------------------------------------*/
+$font-xxxxs:			10px !default;
+$font-xxxs:				12px !default;
+$font-xxs:				14px !default;
+$font-xs:				16px !default;
+$font-sm:				18px !default;
+$font-md:				24px !default;
+$font-lg:				28px !default;
+$font-xl:				36px !default;
+$font-xxl:				48px !default;
+$font-xxxl:				64px !default;
+$font-xxxxl:			80px !default;
+
+/*Paddings & margins*/
+/*-----------------------------------------------------------------------------*/
+$space-xxl:				100px !default;
+$space-xl:				80px !default;
+$space-lg:				60px !default;
+$space-md:				40px !default;
+$space-sm:				20px !default;
+$space-xs:				10px !default;
+$space-xxs:				5px !default;
+
+/*Other*/
+/*-----------------------------------------------------------------------------*/
+$radius-sm:				5px !default;
+$radius-md:				30px !default;
+$radius-lg:				50% !default;
+
+/*Mixins*/
+/*-----------------------------------------------------------------------------*/
+@mixin aspect-ratio($width, $height) {
+	position: relative;
+
+	&:before {
+		display: block;
+		content: "";
+		width: 100%;
+		padding-top: ($height / $width) * 100%;
+	}
+
+	> .aspect-inner {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+}
+
+@mixin clearfix() {
+	&:before,
+	&:after {
+		content: "";
+		display: table;
+	}
+
+	&:after {
+		clear: both;
+	}
+}
+
+@mixin gradient1() {
+	background: $main-clr1; /* Old browsers */
+	background: -moz-linear-gradient(-45deg, $main-clr1 0%, darken(#195eaf, 5%) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg, $main-clr1 0%,darken(#195eaf, 5%) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg, $main-clr1 0%,darken(#195eaf, 5%) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$main-clr1', endColorstr='darken(#195eaf, 5%)',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+@mixin gradient2() {
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,7db9e8+100&1+0,0+100 */
+	background: -moz-linear-gradient(left,  rgba($white, 1) 20%, rgba($black,0) 60%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left,  rgba($white, 1) 20%,rgba($black,0) 60%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right,  rgba($white, 1) 20%,rgba($black,0) 60%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000e8', GradientType=1 ); /* IE6-9 */
+}
